@@ -37,7 +37,5 @@ for number in range(1, nr_numbers +
     rng = random.randint(0, 9)
     password += numbers[rng]
 
-shuf = list(password)  #shuffles the string so the password is random
-random.shuffle(shuf)
-password = ''.join(shuf)
+password = ''.join(random.sample(password,len(password)))  #shuffles the string so the password is random
 print(password)
